@@ -1,0 +1,94 @@
+[gd_scene load_steps=14 format=3 uid="uid://df1hbjthm2h7h"]
+
+[ext_resource type="Texture2D" uid="uid://22vnw5f0iuo8" path="res://brackeys_platformer_assets/sprites/slime_purple.png" id="1_4fnkl"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ka3ug"]
+atlas = ExtResource("1_4fnkl")
+region = Rect2(72, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_idvka"]
+atlas = ExtResource("1_4fnkl")
+region = Rect2(0, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_csbq7"]
+atlas = ExtResource("1_4fnkl")
+region = Rect2(24, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_65ugo"]
+atlas = ExtResource("1_4fnkl")
+region = Rect2(48, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eq50l"]
+atlas = ExtResource("1_4fnkl")
+region = Rect2(0, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_13mug"]
+atlas = ExtResource("1_4fnkl")
+region = Rect2(24, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lm0h1"]
+atlas = ExtResource("1_4fnkl")
+region = Rect2(48, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ph5a4"]
+atlas = ExtResource("1_4fnkl")
+region = Rect2(72, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yynhr"]
+atlas = ExtResource("1_4fnkl")
+region = Rect2(0, 48, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2w315"]
+atlas = ExtResource("1_4fnkl")
+region = Rect2(24, 48, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7y2l0"]
+atlas = ExtResource("1_4fnkl")
+region = Rect2(48, 48, 24, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7pod8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ka3ug")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_idvka")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_csbq7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_65ugo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eq50l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_13mug")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lm0h1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ph5a4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yynhr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2w315")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7y2l0")
+}],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}]
+
+[node name="Segment" type="AnimatedSprite2D"]
+modulate = Color(0, 0, 1, 1)
+sprite_frames = SubResource("SpriteFrames_7pod8")
+animation = &"new_animation"
+frame_progress = 0.76628554

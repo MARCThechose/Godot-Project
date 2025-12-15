@@ -1,0 +1,5 @@
+res://scenes/main.tscn
+res://scripts/player/snake.gd
+res://scripts/main.gd
+res://scenes/food/food.tscn
+res://scenes/player/segment.tscn
