@@ -64,30 +64,4 @@ func move():
 			die()
 			return
 	
-	# Move the snake
-	var tail = body_segments.pop_back()
-	tail.position = new_head_pos
-	body_segments.insert(0, tail)
-
-func add_segment(pos):
-	var new_segment = segment_scene.instantiate()
-	new_segment.position = pos
-	get_parent().add_child(new_segment) # Add to the main scene, not the snake node
-	body_segments.append(new_segment)
-
-func grow():
-	var tail = body_segments[body_segments.size() - 1]
-	var new_segment = segment_scene.instantiate()
-	new_segment.position = tail.position # It will be correctly placed on next move
-	get_parent().add_child(new_segment)
-	body_segments.append(new_segment)
-
-func get_head_position():
-	return body_segments[0].position
-
-func die():
-	is_alive = false
-	get_parent().game_over()
-
-func _on_MoveTimer_timeout():
-	move()
+	
