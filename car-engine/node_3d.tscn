@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://c03iu6fvm5s0t"]
+
+[ext_resource type="PackedScene" uid="uid://ck4rjy5lduuju" path="res://nissan_gtr.tscn" id="1_a202f"]
+[ext_resource type="PackedScene" uid="uid://c3p28qv26dkhe" path="res://kenney_city-kit-roads/Models/GLB format/light-square.glb" id="2_a0tk4"]
+[ext_resource type="ArrayMesh" uid="uid://cin5i267xu2m0" path="res://Models/OBJ format/building-c.obj" id="3_r3fl7"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_a0tk4"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, 0, -42.946777, 0.12669992)
+shape = SubResource("BoxShape3D_a0tk4")
+
+[node name="Nissan GTR" parent="StaticBody3D" instance=ExtResource("1_a202f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.3764973, 6.8416605, 14)
+
+[node name="light-square2" parent="StaticBody3D" instance=ExtResource("2_a0tk4")]
+transform = Transform3D(1, 0, 0, 0, 2.1976306, 0, 0, 0, 1.9744501, -14.658465, 0.5, 18.103365)
+
+[node name="BuildingC" type="MeshInstance3D" parent="StaticBody3D"]
+transform = Transform3D(23.855682, 0, 0, 0, 9.991619, 0, 0, 0, 23.348083, -16.143007, 0.50000095, 12.675037)
+mesh = ExtResource("3_r3fl7")
